@@ -31,12 +31,34 @@ forms:
   label: Carbon DB connection information
   description: WSO2 API Manager - Carbon Database connection information
   properties:
+  - name: carbon_db_database
+    type: dropdown_select
+    label: Database
+    options:
+    - name: mysql
+      label: mysql
+      default: true
+    - name: mssql
+      label: mssql
+    - name: postgres
+      label: postgres
+    - name: oracle
+      label: oracle
   - name: carbon_db_hostname
     type: string
     label: Hostname
   - name: carbon_db_name
     type: string
     label: Database Name
+  - name: carbon_db_port
+    type: integer
+    label: Port
+  - name: carbon_db_driver
+    type: string
+    label: Driver Class Name
+  - name: carbon_db_query
+    type: string
+    label: Validation Query
   - name: carbon_db_username
     type: string
     label: Username
@@ -114,8 +136,12 @@ packages:
     properties:
       wso2apim:
         carbon_db:
+          database: (( .properties.carbon_db_database.value ))
           hostname: (( .properties.carbon_db_hostname.value ))
           db_name: (( .properties.carbon_db_name.value ))
+          port: (( .properties.carbon_db_port.value ))
+          driver: (( .properties.carbon_db_driver.value ))
+          query: (( .properties.carbon_db_query.value ))
           username: (( .properties.carbon_db_username.value ))
           password: (( .properties.carbon_db_password.value ))
         am_db:
@@ -156,8 +182,12 @@ packages:
     properties:
       wso2apim:
         carbon_db:
+          database: (( .properties.carbon_db_database.value ))
           hostname: (( .properties.carbon_db_hostname.value ))
           db_name: (( .properties.carbon_db_name.value ))
+          port: (( .properties.carbon_db_port.value ))
+          driver: (( .properties.carbon_db_driver.value ))
+          query: (( .properties.carbon_db_query.value ))
           username: (( .properties.carbon_db_username.value ))
           password: (( .properties.carbon_db_password.value ))
         am_db:
@@ -193,8 +223,12 @@ packages:
     properties:
       wso2apim:
         carbon_db:
+          database: (( .properties.carbon_db_database.value ))
           hostname: (( .properties.carbon_db_hostname.value ))
           db_name: (( .properties.carbon_db_name.value ))
+          port: (( .properties.carbon_db_port.value ))
+          driver: (( .properties.carbon_db_driver.value ))
+          query: (( .properties.carbon_db_query.value ))
           username: (( .properties.carbon_db_username.value ))
           password: (( .properties.carbon_db_password.value ))
         am_db:
@@ -230,8 +264,12 @@ packages:
     properties:
       wso2apim:
         carbon_db:
+          database: (( .properties.carbon_db_database.value ))
           hostname: (( .properties.carbon_db_hostname.value ))
           db_name: (( .properties.carbon_db_name.value ))
+          port: (( .properties.carbon_db_port.value ))
+          driver: (( .properties.carbon_db_driver.value ))
+          query: (( .properties.carbon_db_query.value ))
           username: (( .properties.carbon_db_username.value ))
           password: (( .properties.carbon_db_password.value ))
         am_db:

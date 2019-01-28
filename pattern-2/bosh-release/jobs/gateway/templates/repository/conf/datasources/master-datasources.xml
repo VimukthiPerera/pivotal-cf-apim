@@ -39,7 +39,7 @@
                     <url>jdbc:mysql://<%= p("wso2apim.carbon_db.hostname") %>:3306/<%= p("wso2apim.carbon_db.db_name") %>?autoReconnect=true&amp;useSSL=false</url>
                     <username><%= p("wso2apim.carbon_db.username") %></username>
                     <password><%= p("wso2apim.carbon_db.password") %></password>
-                    <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+                    <driverClassName><%= p("wso2apim.carbon_db.driver") %></driverClassName>
                     <maxActive>50</maxActive>
                     <maxWait>60000</maxWait>
                     <testOnBorrow>true</testOnBorrow>
@@ -60,7 +60,8 @@
                     <url>jdbc:mysql://<%= p("wso2apim.carbon_db.hostname") %>:3306/<%= p("wso2apim.carbon_db.db_name") %>?autoReconnect=true&amp;useSSL=false</url>
                     <username><%= p("wso2apim.carbon_db.username") %></username>
                     <password><%= p("wso2apim.carbon_db.password") %></password>
-                    <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+                    <!--<driverClassName>com.mysql.jdbc.Driver</driverClassName>-->
+                    <driverClassName><%= p("wso2apim.carbon_db.driver") %></driverClassName>
                     <maxActive>50</maxActive>
                     <maxWait>60000</maxWait>
                     <testOnBorrow>true</testOnBorrow>
