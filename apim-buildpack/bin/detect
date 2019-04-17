@@ -19,4 +19,16 @@
 #
 # ----------------------------------------------------------------------------
 
-# Determines whether or not to apply the buildpack to an app.
+# This script determines whether or not to apply the WSO2 API-M buildpack to an app.
+
+set -e
+
+BUILD_DIR=$1
+BP_LOCATION=$(dirname $(dirname $0))
+
+# Exit if app is not compatible with the WSO2 API-M buildpack.
+if [ ! -f $BUILD_DIR/bin/gateway ] && [ ! -f $BUILD_DIR/runtime/bin/ballerina ]; then
+  exit 1
+fi
+
+echo "WSO2 API Manager Buildpack version: `cat $BP_LOCATION/VERSION`"
