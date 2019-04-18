@@ -19,4 +19,19 @@
 #
 # ----------------------------------------------------------------------------
 
-# Provides dependencies for an app.
+# Provides dependencies for an app. All output sent to STDOUT is relayed to the user through the
+# Cloud Foundry Command Line Interface (cf CLI).
+set -euo pipefail
+
+# The build directory for the app
+BUILD_DIR=$1
+
+# The cache directory, which is a location the buildpack can use to store assets during the build
+# process
+CACHE_DIR=$2
+
+# The deps directory, which is where dependencies provided by all buildpacks are installed
+DEPS_DIR=$3
+
+# The index, which is a number that represents the ordinal position of the buildpack
+DEPS_IDX=$4
