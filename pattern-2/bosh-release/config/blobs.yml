@@ -1,0 +1,20 @@
+jdbcdrivers/mssql-jdbc-7.0.0.jre8.jar:
+  size: 1166240
+  object_id: 2a5fee55-0ab9-463e-67cf-e935454742fd
+  sha: 7668e824248b69849d3eff2a7beada01f177a232
+jdbcdrivers/mysql-connector-java-5.1.45-bin.jar:
+  size: 999810
+  object_id: 98da65b7-a6f3-4c1e-6836-2f15269fc08a
+  sha: 6223be933fbc8d81f819aacad0ce09346d5911c4
+openjdk/OpenJDK8U-jdk_x64_linux_hotspot_8u192b12.tar.gz:
+  size: 78343064
+  object_id: 27c10653-a68f-425e-7b9a-8dba29da88de
+  sha: cb98715582bd68170cf00f9c2801e7162c73c8f8
+wso2am/wso2am-2.6.0.zip:
+  size: 452208623
+  object_id: c43e1bbb-58d2-44f9-4fab-805926932e6f
+  sha: 91b4d631b8da98cf6aa90c30190cba4dbb4ec3c4
+wso2am_analytics/wso2am-analytics-2.6.0.zip:
+  size: 243593373
+  object_id: 18cc2971-69de-4948-6f21-b820934898a1
+  sha: 30e9ff47ee3a7bbce97cfa0f2744889e448b9790
